@@ -318,3 +318,7 @@ img {
   background-color: #ffffff;
   border-bottom: 1px solid #e5ddd5;
 }
+
+.news__wrapper {
+  padding: 36px 20px 29px;
+}
