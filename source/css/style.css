@@ -314,3 +314,7 @@ img {
     max-width: none;
   }
 }
+.news {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5ddd5;
+}
