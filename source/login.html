@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>регистрация</title>
+	  <link rel="stylesheet" href="css/normalize.css">
+	 <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section class="login">
+			<h2 class="login__title">Личный кабинет</h2>
+			<p class="login__info">Введите свой логин и пароль, чтобы войти</p>
+			<form class="login__form" action="https://echo.htmlacademy.ru" method="post">
+				<p class="login__username">
+					<input type="text" name="username" placeholder="Логин" id="login__username">
+					<label class="visually-hidden" for="login__username">Логин</label>
+				</p>
+				<p class="login__password">
+					<input type="password" name="password" placeholder="Пароль" id="login__password">
+					<label class="visually-hidden" for="login__password">Пароль</label>
+				</p>
+				<div class="login__password-info">
+					<p class="login__remember-password">
+						<input class="visually-hidden" type="checkbox" name="remember" id="remember-password">
+						<label for="remember-password">Запомнить пароль</label>
+					</p>
+					<a class="login__lost-password" href="#">Я забыл пароль!</a>
+				</div>
+				<p class="login__buttons">
+					<button class="login__button login__button--enter" type="submit">
+						Войти	<span>&nbsp;в личный кабинет</span>
+					</button>
+					<button class="login__button login__button--close" type="button">Закрыть</button>
+				</p>
+			</form>
+		</section>
+</body>
+</html>
