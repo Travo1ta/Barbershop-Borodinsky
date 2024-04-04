@@ -1,0 +1,26 @@
+.slider__wrapper {
+  list-style: none;
+  padding: 0;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+}
+.slider__toggle {
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin-right: 25px;
+  border: 1px solid $black;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.slider__toggle:nth-child(3) {
+  margin-right: 0;
+}
+.slider__toggle:hover {
+  background-color: white;
+}
+.slider {
+  overflow: hidden;
+}

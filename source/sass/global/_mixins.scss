@@ -1,1 +1,75 @@
 
+
+@mixin margin-padding-reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin content-padding {
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+  }
+}
+
+@mixin title-font-tablet {
+  /*padding-left: 64px;*/
+  margin: 0;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+@mixin ul-reset() {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@mixin a-reset() {
+	text-decoration: none;
+}
+
+@mixin button-reset() {
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+@mixin p-reset() {
+	margin: 0;
+}
+
+@mixin h-reset() {
+	margin: 0;
+}
+
+@mixin blockquote-reset() {
+	margin: 0;
+}
+
+@mixin cite-reset() {
+	font-style: normal;
+}
+
+@mixin input-reset() {
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+@mixin fieldset-reset() {
+	margin: 0;
+	padding: 0;
+	border: none;
+}

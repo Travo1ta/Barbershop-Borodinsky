@@ -1,0 +1,215 @@
+.page-footer {
+  background-color: $bg-darkgrey;
+}
+.page-footer__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+.contacts__title,
+.contacts__text {
+  display: block;
+  text-align: center;
+}
+.contacts__title {
+  margin-top: 30px;
+}
+.contacts__text {
+  padding: 0px 60px;
+  margin: 0;
+  margin-top: 10px;
+}
+.contacts__phone {
+  color: #e6e6e6;
+  display: block;
+  width: 280px;
+  height: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #3a3a3a;
+}
+.contacts__phone:hover {
+  border: 1px solid #535353;
+}
+.contacts__phone-mobile {
+  display: none;
+}
+.social__title {
+  display: none;
+}
+.social__list {
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.social__item {
+  width: 107px;
+  height: 107px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #3a3a3a;
+}
+.social__item:hover {
+  border: 1px solid #535353;
+}
+.social__link--vkontakte::after {
+  content: "";
+  display: block;
+  width: 107px;
+  height: 107px;
+  background-image: url("../img/vk-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.social__link--facebook::after {
+  content: "";
+  display: block;
+  width: 107px;
+  height: 107px;
+  background-image: url("../img/fb-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.social__link--instagram::before {
+  content: "";
+  display: block;
+  width: 107px;
+  height: 107px;
+  background-image: url("../img/insta-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.copyright__text {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.copyright__link {
+  color: #e6e6e6;
+  border: 1px solid #3a3a3a;
+  margin-bottom: 25px;
+}
+.copyright__link:hover {
+  border: 1px solid #535353;
+}
+@media (min-width: $tablet-width) {
+  .page-footer {
+    width: 768px;
+    margin: 0 auto;
+  }
+  .page-footer__wrapper {
+    width: 640px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: -135px;
+  }
+  .contacts {
+    order: 0;
+  }
+  .social {
+    order: 2;
+  }
+  .copyright {
+    order: 1;
+  }
+  .contacts__title {
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 55px;
+  }
+  .contacts__text {
+    text-align: left;
+    padding: 0;
+  }
+  .contacts__phone {
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-weight: normal;
+  }
+  .contacts__phone:hover {
+    border: none;
+  }
+  .contacts__phone-mobile {
+    display: inline;
+  }
+  .copyright__text {
+    margin-top: 55px;
+    padding-top: 0;
+  }
+  .social__item {
+    width: 215px;
+    height: 100px;
+    margin-bottom: 60px;
+  }
+  .social__link--vkontakte::after {
+    width: 215px;
+    height: 100px;
+  }
+  .social__link--facebook::after {
+    width: 215px;
+    height: 100px;
+  }
+  .social__link--instagram::before {
+    width: 215px;
+    height: 100px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .page-footer {
+    width: 1200px;
+  }
+  .page-footer__wrapper {
+    width: 960px;
+  }
+  .social {
+    order: 1;
+  }
+  .copyright {
+    order: 2;
+  }
+  .social__item {
+    width: 50px;
+    height: 50px;
+  }
+  .social__link--vkontakte::after {
+    width: 20px;
+    height: 20px;
+    background-size: auto 19px;
+    padding: 15px;
+  }
+  .social__link--facebook::after {
+    width: 20px;
+    height: 20px;
+    background-size: auto 22px;
+    padding: 15px;
+  }
+  .social__link--instagram::before {
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    padding: 15px;
+  }
+  .social__title {
+    display: inherit;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: normal;
+    margin-top: 45px;
+    text-align: center;
+  }
+  .social {
+    margin-right: 130px;
+  }
+  .copyright__text {
+    padding-left: 20px;
+  }
+}
