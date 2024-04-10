@@ -1,5 +1,5 @@
-
 .site-list {
+
   font-weight: bold;
 }
 .site-list a {
@@ -30,7 +30,6 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 570px;
-
   }
   .site-list__item {
     margin-right: 32px;
@@ -51,6 +50,7 @@
     background: #826550;
   }
   .site-list__item a {
+
     padding: 0;
     padding-top: 25px;
     padding-bottom: 23px;
@@ -148,10 +148,7 @@
     position: relative;
     width: auto;
     height: auto;
-    padding-top: 25px;
-    padding-right: 30px;
-    padding-bottom: 23px;
-    padding-left: 50px;
+    padding: 25px 30px 23px 50px;
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
