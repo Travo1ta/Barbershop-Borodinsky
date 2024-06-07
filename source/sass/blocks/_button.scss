@@ -14,3 +14,43 @@
   text-transform: uppercase;
   border: 1px solid #e5ddd5;
 }
+
+.button {
+  display: inline-block;
+  padding: 10px 0;
+  width: 280px;
+  margin-left: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  border: 1px solid #c5c0bb;
+}
+.button:hover {
+  border: 1px solid #ad9d8e;
+}
+.huge-button {
+  display: inline-block;
+  padding: 10px 0;
+  width: 280px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font: inherit;
+  font-weight: bold;
+  background-color: #826550;
+  color: white;
+}
+.huge-button:hover {
+  background-color: #6a4d38;
+}
+.huge-button:active {
+  color: #8e7a6c;
+}
+@media (min-width: 768px) {
+  .button {
+    width: 158px;
+  }
+}

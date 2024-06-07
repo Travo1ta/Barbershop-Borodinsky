@@ -1,9 +1,10 @@
 {
-  "name": "{{projectName}}",
+  "name": "barbershop-borodinsky",
   "private": true,
   "description": "Личный проект «{{projectTitle}}» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "@stylistic/stylelint-plugin": "^2.1.2",
     "autoprefixer": "10.4.0",
     "browser-sync": "2.27.7",
     "gulp": "4.0.2",
@@ -11,11 +12,13 @@
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
     "postcss": "8.3.11",
-    "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "0.1.11"
+    "stylelint": "^16.6.1",
+    "stylelint-config-htmlacademy": "0.1.11",
+    "stylelint-config-standard": "^36.0.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
+    "lint:css": "stylelint 'source/css/**/*.css' --fix",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",

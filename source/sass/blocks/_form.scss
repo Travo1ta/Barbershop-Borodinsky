@@ -1,0 +1,226 @@
+.form {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #f8f5f2;
+  color: #000000;
+}
+
+.form__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.form__title {
+  margin: 0;
+  padding: 30px 0;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form__button-main-page {
+  display: none;
+}
+
+.appointement-form p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.appointement-form input[type="text"] {
+  box-sizing: border-box;
+  width: 280px;
+  padding: 14px;
+  padding-left: 17px;
+  font: inherit;
+  color: #464646;
+  font-size: 18px;
+  line-height: 20px;
+  border: 1px solid #dac6b2;
+}
+
+.appointement-form input::placeholder,
+.appointement-form textarea::placeholder {
+  font: inherit;
+  color: #545352;
+}
+
+.appointement-form input[class="phone"] {
+  margin-top: 30px;
+}
+
+.appointement-form textarea {
+  box-sizing: border-box;
+  width: 280px;
+  padding: 14px;
+  padding-left: 17px;
+  font: inherit;
+  color: #464646;
+  font-size: 18px;
+  line-height: 20px;
+  resize: none;
+  border: 1px solid #dac6b2;
+  margin-top: 26px;
+}
+
+.form__title-beard-type {
+  margin-top: 30px;
+}
+
+.appointement-form h3 {
+  font-size: 20px;
+  line-height: 27px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #545352;
+  text-align: center;
+}
+
+.form__beard-type-item {
+  display: flex;
+  flex-direction: column;
+  width: 65px;
+  padding: 14px;
+  padding-top: 18px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.radio-indicator {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid rgba(213 201 189 / 0.7);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.radio-indicator:hover {
+  border-color: rgba(130 101 80 / 0.4);
+}
+.radio-indicator:active {
+  background-color: #d5c9bd;
+}
+
+input[type="radio"]:checked + .radio-indicator::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 15px;
+  left: 15px;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(213 201 189 / 0.7);
+  border-radius: 30px;
+}
+
+input[type="radio"]:focus + .radio-indicator::after {
+  box-shadow: 0 0 4px 4px #826550;
+}
+
+.form__beard-type-item input[type="radio"],
+.form__additions input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form__beard-type-item img {
+  margin-bottom: auto;
+}
+
+.form__beards-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__beards-text {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.form__additions {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__title-additions {
+  margin: 33px 0;
+}
+
+.checkbox-indicator {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 25px;
+  background-color: white;
+  border: 1px solid rgba(213, 201, 189, 0.7);
+}
+
+input[type="checkbox"]:hover + .checkbox-indicator {
+  border-color: rgba(130, 101, 80, 0.4);
+  cursor: pointer;
+}
+
+input[type="checkbox"]:focus + .checkbox-indicator {
+  box-shadow: 0 0 4px 4px #826550;
+}
+
+.checkbox-indicator:active {
+  background-color: #d5c9bd;
+}
+
+.checkbox-indicator::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  position: relative;
+  top: 18px;
+  left: 10px;
+  background-color: black;
+}
+
+.checkbox-indicator::before {
+  transform: rotate(-45deg);
+}
+
+.checkbox-indicator::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 2px;
+  position: relative;
+  top: 21px;
+  left: 5px;
+  background-color: black;
+}
+
+.checkbox-indicator::after {
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:not(:checked) + .checkbox-indicator::before,
+input[type="checkbox"]:not(:checked) + .checkbox-indicator::after {
+  display: none;
+}
+
+.additions-item {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.form__submit-button {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}

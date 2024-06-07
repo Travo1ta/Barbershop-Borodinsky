@@ -87,7 +87,7 @@
     background-color: $white;
   }
   .site-list__item a[href]:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0 0 0 / 0.3);
     background-color: #ffffff;
     opacity: 1;
   }
@@ -125,13 +125,13 @@
   .user-list__login:hover .user-list__login-icon {
     opacity: 1;
   }
-  .user-list__login:hover .user-list__login-icon polygon {
+  .user-list__login:hover .user-list__login-icon {
     fill: #826550;
   }
   .user-list__login:active .user-list__login-icon {
     opacity: 0.3;
   }
-  .user-list__login:active .user-list__login-icon polygon {
+  .user-list__login:active .user-list__login-icon {
     fill: #ffffff;
   }
   .user-list__login-icon {
@@ -160,13 +160,13 @@
     background-color: #ffffff;
   }
   .user-list__login:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0 0 0 / 0.3);
     background-color: #ffffff;
   }
   .user-list__login:hover .user-list__login-icon {
     opacity: 0.3;
   }
-  .user-list__login:hover .user-list__login-icon polygon {
+  .user-list__login:hover .user-list__login-icon {
     fill: #000000;
   }
   .user-list__login:active .user-list__login-icon {
