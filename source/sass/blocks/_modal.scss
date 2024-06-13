@@ -1,0 +1,99 @@
+.modal {
+  position: fixed;
+  top: 136px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 320px;
+  background-color: #f8f5f2;
+  color: black;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+  //display: none;
+}
+
+.modal__show {
+  display: inherit;
+}
+.modal__title {
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  margin: 0;
+}
+.modal__text {
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  padding-bottom: 5px;
+  margin: 0;
+}
+.modal__inputs input {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 280px;
+  height: 50px;
+  font: inherit;
+  color: black;
+  padding-left: 15px;
+  padding-right: 50px;
+  margin: 2px 20px;
+}
+.modal__inputs input[type="text"] {
+  background-image: url("/source/img/svg/user.svg");
+  background-position: 245px center;
+  background-repeat: no-repeat;
+}
+.modal__inputs input[type="password"] {
+  background-image: url("/source/img/svg/lock.svg");
+  background-position: 245px center;
+  background-repeat: no-repeat;
+}
+.modal__button-enter,
+.modal__button-close {
+  width: 130px;
+  height: 50px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 35px;
+}
+.modal__button-enter {
+  background-color: #826550;
+  color: white;
+}
+.modal__checkbox:not(:checked) + .checkbox-indicator::before,
+.modal__checkbox:not(:checked) + .checkbox-indicator::after {
+  display: none;
+}
+.modal__checkbox:focus + .checkbox-indicator {
+  box-shadow: 0 0 4px 4px #826550;
+}
+.modal__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.modal__checkbox-label {
+  display: flex;
+  align-items: center;
+}
+.modal__checkbox-label .checkbox-indicator {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.modal__remember {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  justify-content: space-between;
+}

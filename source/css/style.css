@@ -174,14 +174,12 @@ button {
   z-index: 2;
   display: block;
   width: 70px;
-  height: 51px;
+  height: 50px;
   background-color: #6a4d38;
   cursor: pointer;
   border: none;
 }
-
-.main-nav__toggle:hover,
-.main-nav__toggle:active {
+.main-nav__toggle:hover, .main-nav__toggle:active {
   background-color: #624530;
 }
 
@@ -197,18 +195,32 @@ button {
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
-  background-color: rgb(255 255 255 / 0.3);
-  box-shadow: 0 8px 0 0 rgb(255 255 255 / 0.3), 0 16px 0 0 rgb(255 255 255 / 0.3);
+  background-color: fade(#ffffff, 30%);
+  box-shadow: 0 8px 0 0 fade(#ffffff, 30%), 0 16px 0 0 fade(#ffffff, 30%);
 }
 
+@media (max-width: 767px) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+  .main-nav--closed .site-list__item--active {
+    display: block;
+  }
+  .main-nav--closed .site-list__item--active {
+    padding-right: 70px;
+    padding-left: 30px;
+    text-align: center;
+  }
+  .main-nav--closed .user-list__item {
+    display: none;
+  }
+}
 .main-nav--opened .main-nav__toggle {
   top: 0;
   right: 10px;
   left: 0;
 }
-
-.main-nav--opened .main-nav__toggle::before,
-.main-nav--opened .main-nav__toggle::after {
+.main-nav--opened .main-nav__toggle::before, .main-nav--opened .main-nav__toggle::after {
   content: "";
   position: absolute;
   top: 24px;
@@ -217,20 +229,16 @@ button {
   height: 2px;
   background-color: #ffffff;
 }
-
 .main-nav--opened .main-nav__toggle::before {
   transform: rotate(45deg);
   box-shadow: none;
 }
-
 .main-nav--opened .main-nav__toggle::after {
   transform: rotate(-45deg);
   box-shadow: none;
 }
-
-.main-nav--opened .main-nav__toggle:active::before,
-.main-nav--opened .main-nav__toggle:active::after {
-  background-color: rgb(255 255 255 / 0.3);
+.main-nav--opened .main-nav__toggle:active::before, .main-nav--opened .main-nav__toggle:active::after {
+  background-color: fade(#ffffff, 30%);
 }
 
 .main-nav__list a {
@@ -269,7 +277,7 @@ button {
     z-index: 2;
     width: 7px;
     height: 100%;
-    box-shadow: inset 4px 0 7px -2px rgb(0 0 0 / 0.4);
+    box-shadow: inset 4px 0 7px -2px fade(#000000, 40%);
   }
 }
 @media (min-width: 768px) {
@@ -284,7 +292,8 @@ button {
   .main-nav__wrapper {
     display: flex;
     justify-content: space-between;
-    width: 640px;
+    width: 84%;
+    max-width: 960px;
     margin: 0 auto;
   }
   .user-list {
@@ -294,10 +303,6 @@ button {
 @media (min-width: 1200px) {
   .main-nav {
     width: 1200px;
-  }
-  .main-nav__wrapper {
-    width: 960px;
-    margin: 0 auto;
   }
   .site-list {
     width: 780px;
@@ -311,6 +316,7 @@ button {
 }
 
 .site-list a {
+  position: relative;
   display: block;
   padding: 12px 21px;
   padding-bottom: 13px;
@@ -330,7 +336,7 @@ button {
 }
 
 .site-list a[href]:active {
-  color: rgb(255 255 255 / 0.3);
+  color: fade(#ffffff, 30%);
   background-color: #6a4d38;
   border-top-color: #6a4d38;
 }
@@ -341,6 +347,7 @@ button {
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 570px;
+    flex-grow: 1;
   }
   .site-list__item {
     margin-right: 32px;
@@ -397,96 +404,9 @@ button {
     background-color: #ffffff;
   }
   .site-list__item a[href]:active {
-    color: rgb(0 0 0 / 0.3);
-    background-color: #ffffff;
-    opacity: 1;
-  }
-}
-.user-list__login {
-  position: relative;
-  display: block;
-  padding: 17px 21px;
-  padding-left: 49px;
-  line-height: 18px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.user-list__login-icon {
-  position: absolute;
-  top: 17px;
-  left: 21px;
-  width: 16px;
-  height: 16px;
-  opacity: 0.3;
-}
-
-.user-list__login-icon polygon {
-  fill: #ffffff;
-}
-
-@media (min-width: 768px) {
-  .user-list {
-    width: 60px;
-  }
-  .user-list__login {
-    width: 60px;
-    height: 70px;
-    padding: 0;
-    font-size: 0;
-  }
-  .user-list__login:hover .user-list__login-icon {
-    opacity: 1;
-  }
-  .user-list__login:hover .user-list__login-icon {
-    fill: #826550;
-  }
-  .user-list__login:active .user-list__login-icon {
+    color: #ffffff;
+    background-color: #000000;
     opacity: 0.3;
-  }
-  .user-list__login:active .user-list__login-icon {
-    fill: #ffffff;
-  }
-  .user-list__login-icon {
-    top: 29px;
-    left: 12px;
-  }
-}
-@media (min-width: 1200px) {
-  .user-list {
-    width: auto;
-    max-width: 160px;
-  }
-  .user-list__login {
-    position: relative;
-    width: auto;
-    height: auto;
-    padding: 25px 30px 23px 50px;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  .user-list__login:hover {
-    color: #000000;
-    background-color: #ffffff;
-  }
-  .user-list__login:active {
-    color: rgb(0 0 0 / 0.3);
-    background-color: #ffffff;
-  }
-  .user-list__login:hover .user-list__login-icon {
-    opacity: 0.3;
-  }
-  .user-list__login:hover .user-list__login-icon {
-    fill: #000000;
-  }
-  .user-list__login:active .user-list__login-icon {
-    opacity: 0.1;
-  }
-  .user-list__login-icon {
-    left: 15px;
   }
 }
 .stats {
@@ -557,7 +477,7 @@ button {
   padding-top: 20px;
   padding-bottom: 14px;
   text-align: center;
-  color: rgb(255 255 255 / 0.3);
+  color: fade(#ffffff, 30%);
   background-color: #292929;
 }
 
@@ -649,7 +569,7 @@ button {
   .stats__legend--top {
     display: block;
     width: 240px;
-    color: rgb(0 0 0 / 0.3);
+    color: rgba(0, 0, 0, 0.3);
   }
   .stats__legend--bottom {
     display: none;
@@ -883,7 +803,7 @@ button {
   background-color: #f8f5f2;
   color: #000000;
   border-bottom: 2px solid #c5c0bb;
-  border-color: rgb(197 192 187 / 0.5);
+  border-color: rgba(197, 192, 187, 0.5);
 }
 
 .news__title {
@@ -922,14 +842,14 @@ button {
   text-decoration: none;
 }
 .news__item:active .news__date {
-  color: rgb(255 255 255 / 0.3);
+  color: rgba(255, 255, 255, 0.3);
   background-color: #6a4d38;
 }
 .news__item:active .news__date:after {
   border-top: 10px solid #6a4d38;
 }
 .news__item:active .news__day {
-  color: rgb(255 255 255 / 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 .news__item:active .news__text {
   color: #6a4d38;
@@ -1220,7 +1140,7 @@ button {
     width: 768px;
     margin-top: -40px;
     border-top: 2px solid #c5c0bb;
-    border-color: rgb(188 197 187 / 0.3);
+    border-color: rgba(188, 197, 187, 0.3);
   }
   .reviews__wrapper {
     width: 640px;
@@ -1269,7 +1189,7 @@ button {
     height: 160px;
     box-sizing: border-box;
     border: 1px solid #c5c0bb;
-    border-color: rgb(197 192 187 / 0.5);
+    border-color: rgba(197, 192, 187, 0.5);
     padding: 35px 0px;
     margin: 15px auto;
     margin-bottom: 25px;
@@ -1282,7 +1202,7 @@ button {
     background-color: #f8f5f2;
     border: none;
     border: 1px solid #c5c0bb;
-    border-color: rgb(197 192 187 / 0.5);
+    border-color: rgba(197, 192, 187, 0.5);
     cursor: pointer;
     font-size: 0px;
   }
@@ -1718,13 +1638,13 @@ button {
   width: 50px;
   height: 50px;
   background-color: white;
-  border: 1px solid rgb(213 201 189 / 0.7);
+  border: 1px solid rgba(213, 201, 189, 0.7);
   border-radius: 30px;
   cursor: pointer;
 }
 
 .radio-indicator:hover {
-  border-color: rgb(130 101 80 / 0.4);
+  border-color: rgba(130, 101, 80, 0.4);
 }
 
 .radio-indicator:active {
@@ -1740,7 +1660,7 @@ input[type=radio]:checked + .radio-indicator::after {
   box-sizing: border-box;
   width: 20px;
   height: 20px;
-  border: 1px solid rgb(213 201 189 / 0.7);
+  border: 1px solid rgba(213, 201, 189, 0.7);
   border-radius: 30px;
 }
 
@@ -1790,11 +1710,11 @@ input[type=radio]:focus + .radio-indicator::after {
   height: 35px;
   margin-right: 25px;
   background-color: white;
-  border: 1px solid rgb(213 201 189 / 0.7);
+  border: 1px solid rgba(213, 201, 189, 0.7);
 }
 
 input[type=checkbox]:hover + .checkbox-indicator {
-  border-color: rgb(130 101 80 / 0.4);
+  border-color: rgba(130, 101, 80, 0.4);
   cursor: pointer;
 }
 
@@ -2011,5 +1931,220 @@ input[type=checkbox]:not(:checked) + .checkbox-indicator::after {
   .form__submit-button {
     margin-top: 28px;
     margin-bottom: 40px;
+  }
+}
+.modal {
+  position: fixed;
+  top: 136px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 320px;
+  background-color: #f8f5f2;
+  color: black;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal__show {
+  display: inherit;
+}
+
+.modal__title {
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  margin: 0;
+}
+
+.modal__text {
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  padding-bottom: 5px;
+  margin: 0;
+}
+
+.modal__inputs input {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 280px;
+  height: 50px;
+  font: inherit;
+  color: black;
+  padding-left: 15px;
+  padding-right: 50px;
+  margin: 2px 20px;
+}
+
+.modal__inputs input[type=text] {
+  background-image: url("/source/img/svg/user.svg");
+  background-position: 245px center;
+  background-repeat: no-repeat;
+}
+
+.modal__inputs input[type=password] {
+  background-image: url("/source/img/svg/lock.svg");
+  background-position: 245px center;
+  background-repeat: no-repeat;
+}
+
+.modal__button-enter,
+.modal__button-close {
+  width: 130px;
+  height: 50px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 35px;
+}
+
+.modal__button-enter {
+  background-color: #826550;
+  color: white;
+}
+
+.modal__checkbox:not(:checked) + .checkbox-indicator::before,
+.modal__checkbox:not(:checked) + .checkbox-indicator::after {
+  display: none;
+}
+
+.modal__checkbox:focus + .checkbox-indicator {
+  box-shadow: 0 0 4px 4px #826550;
+}
+
+.modal__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal__checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.modal__checkbox-label .checkbox-indicator {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.modal__remember {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .user-list {
+    width: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .user-list {
+    width: auto;
+    max-width: 160px;
+  }
+}
+
+.user-list__login {
+  position: relative;
+  display: block;
+  padding: 17px 21px;
+  padding-left: 49px;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .user-list__login {
+    width: 60px;
+    height: 70px;
+    padding: 0;
+  }
+  .user-list__login span {
+    position: absolute;
+    opacity: 0;
+  }
+  .user-list__login:hover .user-list__login-icon {
+    opacity: 1;
+  }
+  .user-list__login:hover .user-list__login-icon polygon {
+    fill: #826550;
+  }
+  .user-list__login:active .user-list__login-icon {
+    opacity: 0.3;
+  }
+  .user-list__login:active .user-list__login-icon polygon {
+    fill: #ffffff;
+  }
+}
+@media (min-width: 1200px) {
+  .user-list__login {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding-top: 25px;
+    padding-right: 30px;
+    padding-bottom: 23px;
+    padding-left: 50px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .user-list__login span {
+    position: static;
+    opacity: 1;
+  }
+  .user-list__login:hover {
+    color: #000000;
+    background-color: #ffffff;
+  }
+  .user-list__login:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+  }
+  .user-list__login:hover .user-list__login-icon {
+    opacity: 0.3;
+  }
+  .user-list__login:hover .user-list__login-icon polygon {
+    fill: #000000;
+  }
+  .user-list__login:active .user-list__login-icon {
+    opacity: 0.1;
+  }
+}
+
+.user-list__login-icon {
+  position: absolute;
+  top: 17px;
+  left: 21px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.3;
+  fill: #ffffff;
+}
+@media (min-width: 768px) {
+  .user-list__login-icon {
+    top: 29px;
+    left: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .user-list__login-icon {
+    left: 15px;
   }
 }

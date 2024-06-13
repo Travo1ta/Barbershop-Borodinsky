@@ -46,7 +46,8 @@
                   <polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7" />
                   <polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0" />
                 </svg>
-                Войти</a>
+                <span>Войти</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -286,6 +287,37 @@
       </div>
     </section>
 
+    <!-- <section class="modal modal__show">
+
+      <h2 class="modal__title">Личный кабинет</h2>
+      <p class="modal__text">Введите свой логин и пароль, чтобы войти</p>
+
+      <form  method="post">
+
+        <p class="modal__inputs">
+          <label for="user-login" class="visually-hidden">Логин</label>
+          <input type="text" id="user-login" name="name" placeholder="Логин">
+
+          <label for="user-password" class="visually-hidden">Пароль</label>
+          <input type="password" id="user-password" name="password" placeholder="Пароль">
+        </p>
+
+        <p class="modal__remember">
+          <label class="modal__checkbox-label">
+            <input class="modal__checkbox" type="checkbox" name="remember">
+            <span class="checkbox-indicator"></span>
+            Запомнить пароль
+          </label>
+          <a class="modal__link-forget" href="#">Я забыл пароль!</a>
+        </p>
+
+        <button class="modal__button-enter button" type="submit">Войти</button>
+        <button class="modal__button-close button" type="button">Закрыть</button>
+
+      </form>
+
+    </section> -->
+
   </main>
 
   <footer class="page-footer">
@@ -329,6 +361,24 @@
 
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
+
 </body>
 
 </html>

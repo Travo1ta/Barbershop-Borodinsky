@@ -5,12 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>регистрация</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="/image/fav-ico.png" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <section class="login">
+  <!-- <section class="login">
     <h2 class="login__title">Личный кабинет</h2>
     <p class="login__info">Введите свой логин и пароль, чтобы войти</p>
     <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
@@ -35,6 +39,37 @@
         </button> <button class="login__button login__button--close" type="button">Закрыть</button>
       </p>
     </form>
+  </section> -->
+
+  <section class="modal modal__show">
+
+    <h2 class="modal__title">Личный кабинет</h2>
+    <p class="modal__text">Введите свой логин и пароль, чтобы войти</p>
+
+    <form  method="post">
+
+      <p class="modal__inputs">
+        <label for="user-login" class="visually-hidden">Логин</label>
+        <input type="text" id="user-login" name="name" placeholder="Логин">
+
+        <label for="user-password" class="visually-hidden">Пароль</label>
+        <input type="password" id="user-password" name="password" placeholder="Пароль">
+      </p>
+
+      <p class="modal__remember">
+        <label class="modal__checkbox-label">
+          <input class="modal__checkbox" type="checkbox" name="remember">
+          <span class="checkbox-indicator"></span>
+          Запомнить пароль
+        </label>
+        <a class="modal__link-forget" href="#">Я забыл пароль!</a>
+      </p>
+
+      <button class="modal__button-enter button" type="submit">Войти</button>
+      <button class="modal__button-close button" type="button">Закрыть</button>
+
+    </form>
+
   </section>
 </body>
 </html>

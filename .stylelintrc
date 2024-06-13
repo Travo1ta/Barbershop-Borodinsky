@@ -4,7 +4,7 @@
   ],
   "rules": {
     "color-function-notation": "modern",
-    "selector-max-compound-selectors": 2,
+    "selector-max-compound-selectors": 3,
     "@stylistic/color-hex-case": "lower",
     "@stylistic/number-leading-zero": "always",
     "@stylistic/unit-case": "lower"
