@@ -115,6 +115,14 @@ button {
     background-repeat: no-repeat;
     background-position: center -9px;
   }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .page-header__logo {
+    background-image: url("../img/back-tablet.jpg@2x.jpg");
+    background-size: 1338px auto;
+  }
+}
+@media (min-width: 768px) {
   .page-header__logo img {
     display: block;
     width: 370px;
@@ -2146,5 +2154,215 @@ input[type=checkbox]:not(:checked) + .checkbox-indicator::after {
 @media (min-width: 1200px) {
   .user-list__login-icon {
     left: 15px;
+  }
+}
+
+.examples {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #f8f5f2;
+  color: #000000;
+}
+
+.examples::after {
+  content: "";
+  display: block;
+  width: 320px;
+  height: 35px;
+  background: url("../img/svg/angle2.svg") center no-repeat;
+}
+
+.examples__button {
+  display: none;
+}
+
+.examples__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  background-color: #f8f5f2;
+}
+
+.examples__title {
+  margin: 0;
+  padding: 30px 0;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.examples__item {
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid #f0e3d6;
+  margin-bottom: 20px;
+}
+
+.examples__cite {
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: bold;
+  font-style: normal;
+  display: block;
+  padding: 20px;
+}
+
+.examples__cite--best {
+  margin-top: -85px;
+}
+
+.examples__text {
+  padding: 0 20px;
+  margin-top: -8px;
+}
+
+.examples__work-list {
+  list-style: none;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -2px;
+  margin-bottom: 4px;
+}
+
+.examples__work-item {
+  font-size: 16px;
+  line-height: 27px;
+  text-transform: uppercase;
+  margin-right: 22px;
+  margin-bottom: 10px;
+}
+
+.examples__work-item::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding-right: 15px;
+  margin-left: -10px;
+  vertical-align: middle;
+}
+
+.examples__cut::before {
+  background: url("../img/svg/haircut.svg") center no-repeat;
+}
+
+.examples__beard::before {
+  padding-right: 30px;
+  background: url("../img/svg/beard-icon.svg") center no-repeat;
+  background-size: 23px;
+}
+
+.examples__mustache::before {
+  padding-right: 27px;
+  background: url("../img/svg/mustache-icon.svg") center no-repeat;
+  background-position: 0 center;
+}
+
+.examples__item .examples__photo--best {
+  width: 280px;
+  height: 480px;
+}
+
+.examples__title-best {
+  font-size: 20px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 25px;
+  display: inline-block;
+  width: 180px;
+  height: 50px;
+  position: relative;
+  top: -102px;
+  left: -3px;
+  background: url("../img/label.png") center no-repeat;
+}
+
+.examples__photo {
+  width: 280px;
+}
+
+@media (min-width: 768px) {
+  .examples {
+    width: 768px;
+  }
+  .examples__wrapper {
+    width: 640px;
+    margin: 0 auto;
+  }
+  .examples__title {
+    text-align: left;
+    display: inline-block;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .examples__button {
+    display: inline-block;
+    transform: translateX(235px);
+    margin-top: 59px;
+    margin-right: 3px;
+  }
+  .examples__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 640px;
+    height: 295px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .examples__photo {
+    width: 270px;
+  }
+  .examples__cite {
+    padding: 50px;
+    padding-bottom: 35px;
+    padding-top: 43px;
+    margin: 0;
+    width: 270px;
+  }
+  .examples__text {
+    width: 270px;
+    padding: 0 50px;
+  }
+  .examples__work-list {
+    width: 270px;
+    padding: 0px;
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: 25px;
+    margin-left: 50px;
+  }
+  .examples__item--best {
+    width: 640px;
+    height: 480px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .examples__title-best {
+    position: relative;
+    left: -280px;
+    top: 20px;
+  }
+  .examples__photo--best {
+    width: 270px;
+    height: 480px;
+  }
+  .examples__cite--best {
+    margin: 0;
+    margin-top: -75px;
+  }
+  .examples::after {
+    content: "";
+    display: block;
+    width: 768px;
+    height: 68px;
+    background: url("/source/img/svg/connector5.svg") center no-repeat;
   }
 }
