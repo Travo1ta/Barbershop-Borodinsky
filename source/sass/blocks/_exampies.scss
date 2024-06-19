@@ -10,7 +10,7 @@
   display: block;
   width: 320px;
   height: 35px;
-  background: url("../img/svg/angle2.svg") center no-repeat;
+  background: url("../img/svg/connector3.svg") center no-repeat;
 }
 
 .examples__button {
@@ -128,7 +128,7 @@
   width: 280px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .examples {
     width: 768px;
   }
@@ -206,6 +206,91 @@
     display: block;
     width: 768px;
     height: 68px;
-    background: url("/source/img/svg/connector5.svg") center no-repeat;
+    background: url("../img/svg/connector5.svg") center no-repeat;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .examples {
+    width: 1200px;
+    padding-bottom: 50px;
+  }
+  .examples__wrapper {
+    width: 968px;
+  }
+  .examples__title {
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    padding-bottom: 80px;
+  }
+
+  .examples__button {
+    transform: translateX(550px);
+  }
+
+  .examples__item {
+    box-sizing: border-box;
+    width: 295px;
+    height: 540px;
+    display: inline-flex;
+    margin-right: 35px;
+  }
+  .examples__item:last-child {
+    margin-right: 0;
+  }
+  .examples__photo {
+    width: 295px;
+  }
+  .examples__cite {
+    width: 225px;
+    padding: 35px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+  .examples__text {
+    width: 250px;
+    padding: 0 33px;
+    margin: 0;
+  }
+  .examples__item--best {
+    width: 964px;
+    height: 480px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .examples__title-best {
+    position: relative;
+    left: 282px;
+    top: 13px;
+    background: url("../img/label2.png") center no-repeat;
+  }
+  .examples__item .examples__photo--best {
+    width: 480px;
+  }
+  .examples__cite--best {
+    margin: 0;
+    margin-top: -75px;
+    padding-top: 130px;
+    padding-left: 28px;
+  }
+  .examples__item--best .examples__work-list {
+    width: 400px;
+    padding: 0;
+  }
+  .examples__item--best .examples__cite {
+    padding-left: 35px;
+  }
+  .examples__item--best .examples__text {
+    width: 300px;
+    padding-left: 35px;
+  }
+  .examples__work-list {
+    width: 240px;
+    margin-bottom: 15px;
+    margin-left: 35px;
+  }
+  .examples::after {
+    display: none;
   }
 }

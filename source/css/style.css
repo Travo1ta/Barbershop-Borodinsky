@@ -2169,7 +2169,7 @@ input[type=checkbox]:not(:checked) + .checkbox-indicator::after {
   display: block;
   width: 320px;
   height: 35px;
-  background: url("../img/svg/angle2.svg") center no-repeat;
+  background: url("../img/svg/connector3.svg") center no-repeat;
 }
 
 .examples__button {
@@ -2363,6 +2363,278 @@ input[type=checkbox]:not(:checked) + .checkbox-indicator::after {
     display: block;
     width: 768px;
     height: 68px;
-    background: url("/source/img/svg/connector5.svg") center no-repeat;
+    background: url("../img/svg/connector5.svg") center no-repeat;
+  }
+}
+@media (min-width: 1200px) {
+  .examples {
+    width: 1200px;
+    padding-bottom: 50px;
+  }
+  .examples__wrapper {
+    width: 968px;
+  }
+  .examples__title {
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    padding-bottom: 80px;
+  }
+  .examples__button {
+    transform: translateX(550px);
+  }
+  .examples__item {
+    box-sizing: border-box;
+    width: 295px;
+    height: 540px;
+    display: inline-flex;
+    margin-right: 35px;
+  }
+  .examples__item:last-child {
+    margin-right: 0;
+  }
+  .examples__photo {
+    width: 295px;
+  }
+  .examples__cite {
+    width: 225px;
+    padding: 35px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+  .examples__text {
+    width: 250px;
+    padding: 0 33px;
+    margin: 0;
+  }
+  .examples__item--best {
+    width: 964px;
+    height: 480px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .examples__title-best {
+    position: relative;
+    left: 282px;
+    top: 13px;
+    background: url("../img/label2.png") center no-repeat;
+  }
+  .examples__item .examples__photo--best {
+    width: 480px;
+  }
+  .examples__cite--best {
+    margin: 0;
+    margin-top: -75px;
+    padding-top: 130px;
+    padding-left: 28px;
+  }
+  .examples__item--best .examples__work-list {
+    width: 400px;
+    padding: 0;
+  }
+  .examples__item--best .examples__cite {
+    padding-left: 35px;
+  }
+  .examples__item--best .examples__text {
+    width: 300px;
+    padding-left: 35px;
+  }
+  .examples__work-list {
+    width: 240px;
+    margin-bottom: 15px;
+    margin-left: 35px;
+  }
+  .examples::after {
+    display: none;
+  }
+}
+.pricelist {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #353535;
+  color: white;
+}
+
+.pricelist::after {
+  content: "";
+  display: block;
+  width: 320px;
+  height: 35px;
+  background: url("../img/svg/connector4.svg") center no-repeat;
+}
+
+.pricelist__wrapper {
+  margin-bottom: 35px;
+}
+
+.pricelist__title {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 35px 0;
+  padding-bottom: 25px;
+}
+
+.pricelist__table {
+  display: none;
+}
+
+.pricelist__list {
+  list-style: none;
+  padding: 0;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.pricelist__item {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.pricelist__name--mobile {
+  margin: 0;
+}
+
+.pricelist__item p {
+  margin: 0;
+}
+
+.pricelist__discount {
+  width: 280px;
+  height: 90px;
+  border: 1px solid #4e4d4d;
+  margin: 0 auto;
+  display: flex;
+}
+
+.pricelist__discount-text {
+  padding: 20px 15px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.pricelist__clock {
+  float: left;
+  padding: 15px 20px;
+}
+
+@media (min-width: 768px) {
+  .pricelist__wrapper {
+    padding-bottom: 135px;
+  }
+  .pricelist__table {
+    display: inherit;
+  }
+  .pricelist__title {
+    text-align: left;
+    font-size: 40px;
+    padding-top: 50px;
+    padding-bottom: 45px;
+  }
+  .pricelist__list {
+    display: none;
+  }
+  .pricelist {
+    width: 768px;
+  }
+  .pricelist__wrapper {
+    width: 640px;
+    margin: 0 auto;
+  }
+  .pricelist__table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .pricelist__table td {
+    border: 1px solid #4e4d4d;
+    padding: 14px;
+    padding-left: 20px;
+  }
+  tr .pricelist__table-number {
+    padding-left: 28px;
+    padding-right: 28px;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .pricelist__table-name {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 27px;
+    width: 230px;
+  }
+  .pricelist__table-wash {
+    font-size: 20px;
+    line-height: 27px;
+    width: 140px;
+  }
+  .pricelist__table-price {
+    font-size: 20px;
+    line-height: 27px;
+    width: 125px;
+  }
+  .pricelist__discount {
+    width: 640px;
+    height: 115px;
+    border: 1px solid #4e4d4d;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+  }
+  .pricelist__clock {
+    width: 75px;
+    height: 75px;
+    padding: 20px;
+  }
+  .pricelist__discount-text {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 45px 70px;
+  }
+}
+@media (min-width: 1200px) {
+  .pricelist {
+    width: 1200px;
+    padding-bottom: 50px;
+  }
+  .pricelist__wrapper {
+    width: 968px;
+  }
+  .pricelist__title {
+    font-size: 40px;
+    padding-top: 85px;
+    padding-bottom: 50px;
+  }
+  .pricelist__table {
+    float: left;
+    width: 630px;
+  }
+  .pricelist__discount {
+    display: inline-block;
+    width: 267px;
+    height: 275px;
+    margin: 0;
+    margin-left: 65px;
+  }
+  .pricelist__clock {
+    width: 140px;
+    height: 140px;
+    float: none;
+    display: block;
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 25px;
+  }
+  .pricelist__discount-text {
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: none;
+    font-weight: normal;
+    text-align: center;
+    padding: 0 50px;
   }
 }
